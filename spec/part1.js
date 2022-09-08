@@ -153,7 +153,7 @@
           iterations.push(letter);
         });
 
-        expect(iterations).to.not.include(FILL_ME_IN);
+        expect(iterations).to.not.include('Do not iterate over me!');
       });
 
       it('should iterate over objects and provide access to each value', function() {
@@ -495,7 +495,7 @@
         expect(result).to.equal(4);
       });
 
-      it('Fill me in with a description of the behavior this test is checking for', function() {
+      it('should pass the accumulator argument as the first item into the iterator if it passed in', function() {
         var result = _.reduce([1, 2, 3], function(memo, item) {
           return memo * item;
         }, 0);
